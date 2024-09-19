@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 14:38:22 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/17 15:53:29 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/09/19 09:26:46 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
+/*
 int main (void)
 {
 
@@ -34,4 +34,4 @@ int main (void)
 	printf("resultado original: %s\n", (char*)memcpy(dest, src, n));
 //	printf("resultado mia:      %s\n", (char*)ft_memcpy(dest, src, n));
 	return (0);
-}
+}*/

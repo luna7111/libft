@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 16:28:26 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/19 10:18:39 by ldel-val         ###   ########.fr       */
+/*   Created: 2024/09/19 08:51:46 by ldel-val          #+#    #+#             */
+/*   Updated: 2024/09/19 09:54:20 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t	i;
+	int i;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	if (dest -  src)
+		ft_memcopy(dest, src, n);
+	else
+	{
+		i = 0;
+		while (i < n)
+		{
+			((char *)dest)[n] = ((char *)src)[n];
+			n ++;
+		}
+	}
+	return(dest);
 }
