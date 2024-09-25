@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 17:15:34 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/25 18:52:46 by ldel-val         ###   ########.fr       */
+/*   Created: 2024/09/24 11:37:55 by ldel-val          #+#    #+#             */
+/*   Updated: 2024/09/25 18:51:11 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+#include <string.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n)
+	while (n)
 	{
-		((unsigned char *)s)[i] = (unsigned char)c;
-		i++;
+		if (*s1 != *s2)
+			return (*s1 - *s2);
+		n--;
 	}
-	return (s);
+	return (0);
 }
-/*
-int main(void)
-{
-
-	char test[] = "hola mundo";
-
-	printf("%s", (char *)ft_memset(test, 'r', 5));
-}*/

@@ -1,35 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 17:15:34 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/25 18:52:46 by ldel-val         ###   ########.fr       */
+/*   Created: 2024/09/25 12:16:10 by ldel-val          #+#    #+#             */
+/*   Updated: 2024/09/25 18:43:53 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
-#include <stdio.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+int	ft_atoi(const char *nptr)
 {
-	size_t	i;
+	int	n;
+	int	sign;
 
-	i = 0;
-	while (i < n)
+	sign = 1;
+	n = 0;
+	while (*nptr <= ' ' && *nptr >= '\t')
+		nptr++;
+	if (*nptr == '-' || *nptr == '+')
 	{
-		((unsigned char *)s)[i] = (unsigned char)c;
-		i++;
+		if (*nptr == '-')
+			sign = -1;
+		nptr ++;
 	}
-	return (s);
+	while (*nptr >= '0' && *nptr <= '9')
+	{
+		n *= 10;
+		n += *nptr - 48;
+		nptr++;
+	}
+	return (n);
 }
 /*
 int main(void)
 {
+	char s[] = "++0 00";
 
-	char test[] = "hola mundo";
-
-	printf("%s", (char *)ft_memset(test, 'r', 5));
-}*/
+	printf("Original: %d\nft: %d", atoi(s), ft_atoi(s));
+}
+*/

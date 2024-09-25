@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 17:15:34 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/25 18:52:46 by ldel-val         ###   ########.fr       */
+/*   Created: 2024/09/23 11:08:44 by ldel-val          #+#    #+#             */
+/*   Updated: 2024/09/25 18:53:30 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+//#include <string.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
+	char	*match;
 
-	i = 0;
-	while (i < n)
-	{
-		((unsigned char *)s)[i] = (unsigned char)c;
-		i++;
-	}
-	return (s);
+	match = (char *)s;
+	while (*match && *match != c)
+		match ++;
+	return (match);
 }
 /*
-int main(void)
+int	main(void)
 {
+	char s[] = "Hello world";
 
-	char test[] = "hola mundo";
-
-	printf("%s", (char *)ft_memset(test, 'r', 5));
-}*/
+	printf("%s", ft_strchr(s, 'a'));
+}
+*/

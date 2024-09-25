@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 08:51:46 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/20 09:31:13 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/09/25 18:51:49 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -35,7 +35,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return(dest);
 }
-
+/*
 int main (void)
 {
 
@@ -47,3 +47,4 @@ int main (void)
 	printf("resultado original: %s\n", (char*)memmove(dest, src, n));
 	return (1);
 }
+*/
