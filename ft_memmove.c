@@ -6,15 +6,15 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 08:51:46 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/25 18:51:49 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/09/26 11:27:04 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <string.h>
+//#include <string.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int i;
+	int	i;
 
 	if (dest >= src)
 	{
@@ -33,7 +33,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			i ++;
 		}
 	}
-	return(dest);
+	return (dest);
 }
 /*
 int main (void)

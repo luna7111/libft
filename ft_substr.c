@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 11:08:44 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/26 11:24:00 by ldel-val         ###   ########.fr       */
+/*   Created: 2024/09/26 14:52:49 by ldel-val          #+#    #+#             */
+/*   Updated: 2024/09/26 17:32:20 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <string.h>
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*match;
+	char	*substr;
 
-	match = (char *)s;
-	match += ft_strlen(match);
-	while (match >= s)
-	{
-		if (*match == c)
-			return (match);
-		match --;
-	}
-	return ("\0");
+	substr = (char *)malloc(sizeof(char) * len);
+	ft_strlcpy(s + start, substr, len);
+	return (substr);
 }
-/*
-int	main(void)
-{
-	char s[] = "Hello world";
-
-	printf("%s", ft_strrchr(s, 'o'));
-}*/

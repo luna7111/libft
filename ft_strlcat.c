@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 12:58:43 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/25 18:54:40 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/09/26 11:28:27 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,11 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t dstlen;
-	size_t srclen;
+	size_t	dstlen;
+	size_t	srclen;
 
 	dstlen = ft_strlen(dst);
 	srclen = ft_strlen(src);
-	
 	if (dstlen > size)
 		return (srclen + size);
 	dst += dstlen;
@@ -28,7 +27,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	while (size-- > 1 && *src)
 		*dst++ = *src++;
 	*dst = '\0';
-	return(srclen + dstlen);
+	return (srclen + dstlen);
 }
 /*
 int main(void)

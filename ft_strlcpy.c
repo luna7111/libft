@@ -6,17 +6,16 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 14:02:40 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/20 11:47:28 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/09/26 11:30:22 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <bsd/string.h>
+//#include <bsd/string.h>
 
-
-size_t	 ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i + 1 < size)

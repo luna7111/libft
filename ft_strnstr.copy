@@ -6,37 +6,39 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 12:35:41 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/26 14:48:32 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/09/26 12:31:59 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <bsd/string.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	char	*s;
+	size_t	match_i;
 	size_t	little_len;
 
-	little_len = ft_strlen(little);
 	if (*little == '\0')
 		return ((char *)big);
-	s = (char *)big;
-	while (*s && len >= little_len)
+	little_len = ft_strlen(little);
+	while (*big && len >= little_len)
 	{
-		if (ft_strncmp(s, little, little_len) == 0)
-			return ((char *)s);
-		s++;
-		len--;
+		match_i = 0;
+		while (big[match_i] && big[match_i] == little[match_i])
+			match_i ++;
+		if (little[match_i] == '\0')
+			return ((char *)big);
+		big ++;
+		len --;
 	}
-	return (NULL);
+	return (0);
 }
-/*
-#include <bsd/string.h>
+
 int	main(void)
 {
 	char big[] = "Hello world";
 	char little[] = "world";
-	size_t len = 10;
-	printf("Original: %s\n ft: %s", strnstr(big, little, len),
-		ft_strnstr(big, little, len));
-}*/
+
+	printf("Original: %s\n ft: %s", strnstr(big, little, 12),
+		ft_strnstr(big, little, 8));
+}
