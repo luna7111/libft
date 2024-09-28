@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 14:44:21 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/26 17:23:58 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/09/28 18:11:19 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <stdint.h>
+# include <limits.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -49,4 +50,20 @@ int		atoi(const char *nptr);
 
 void	*calloc(size_t nmemb, size_t size);
 char	*strdup(const char *s);
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+//
+//char	**ft_split(char const *s, char c);
+//
+//char	*ft_itoa(int n);
+//char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+//void	ft_striteri(char *s, void(*f)(unsigned int , char*));
+//
+//void	ft_putchar_fd(char c, int fd);
+//void	ft_putstr_fd(char *s, int fd);
+//void	ft_putendl_fl(char *s, int fd);
+//void	ft_putnbr_fd(int n, int fd);
+
 #endif

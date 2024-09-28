@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 08:51:46 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/26 11:27:04 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/09/27 15:11:00 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -39,11 +39,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 int main (void)
 {
 
-	char dest[] = "viva la vida";
 	char src[] = "me voy a la luna";
 	size_t n = 5;
 
-	printf("resultado mia:      %s\n", (char*)ft_memmove(dest, src, n));
+	printf("resultado mia:      %s\n", (char*)ft_memmove(src, &src[2], n));
 	printf("resultado original: %s\n", (char*)memmove(dest, src, n));
 	return (1);
 }

@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strstrim.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 14:52:49 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/28 11:01:06 by ldel-val         ###   ########.fr       */
+/*   Created: 2024/09/28 12:36:38 by ldel-val          #+#    #+#             */
+/*   Updated: 2024/09/28 12:50:58 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*substr;
-
-	substr = (char *)malloc(sizeof(char) * len);
-	if (!substr)
-		return (NULL);
-	ft_strlcpy(s + start, substr, len);
-	return (substr);
+	char	*s;
 }
