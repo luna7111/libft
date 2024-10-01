@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 14:44:21 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/28 18:11:19 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/10/01 15:07:44 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,12 @@ char	*ft_strtrim(char const *s1, char const *set);
 //void	ft_putstr_fd(char *s, int fd);
 //void	ft_putendl_fl(char *s, int fd);
 //void	ft_putnbr_fd(int n, int fd);
+//
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
+t_list	*ft_lstnew(void *content);
 #endif

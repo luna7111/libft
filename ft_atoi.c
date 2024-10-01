@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 12:16:10 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/25 18:43:53 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/10/01 15:18:34 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_atoi(const char *nptr)
 		n += *nptr - 48;
 		nptr++;
 	}
-	return (n);
+	return (n * sign);
 }
 /*
 int main(void)

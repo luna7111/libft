@@ -1,5 +1,5 @@
 # Name of the library file
-Name = libft.a
+NAME = libft.a
 # Compiler to use
 CC = gcc
 # Flags to use when compiling
@@ -7,14 +7,14 @@ CFLAGS = -Wall -Wextra -Werror
 # Archiver to use
 AR = ar
 # Flags to use when archiving
-ARFLAGS 0 -rc
+ARFLAGS = -rc
 # Command to use to remove files
 RM = rm -f
 # List of all the .c files for the library
 SRC = \
 ft_isalpha.c\
 ft_isdigit.c\
-ft_isalnum.\
+ft_isalnum.c\
 ft_isascii.c\
 ft_isprint.c\
 ft_strlen.c\
@@ -31,12 +31,12 @@ ft_memchr.c\
 ft_memcmp.c\
 ft_strnstr.c\
 ft_atoi.c\
-ft_calloc.c
+ft_calloc.c\
 ft_strdup.c\
 ft_substr.c\
 ft_strjoin.c\
 ft_strtrim.c\
-ft_split.c\
+#ft_split.c\
 ft_itoa.c\
 ft_strmapi.c\
 ft_striteri.c\
@@ -47,7 +47,7 @@ ft_putnbr_fd.c
 
 BONUS_SRC = \
 ft_lstnew_bonus.c\
-ft_lstsize_bonus.c\
+#ft_lstsize_bonus.c\
 ft_lstlast_bonus.c\
 ft_lstadd_back_bonus.c\
 ft_lstdelone_bonus.c\
@@ -55,15 +55,22 @@ ft_lstclear_bonus.c\
 ft_lstiter_bonus.c\
 ft_lstmap_bonus.c
 
+OBJ= $(SRC:.c=.o)
+
+BONUS_OBJ = $(BONUS_SRC:.c=.o)
+
 all: $(NAME)
 
-$(NAME): $(OBJS)
-		$ (CC) $(CFLAGS -o $(NAME) &(OBJS)
+$(NAME): $(OBJ)
+		$(AR) $(ARFLAGS) $(NAME) $(OBJ)
 
 clean:
-		rm -f $(OBJS)
+		rm -f $(OBJ)
 
 fclean: clean
 		rm -f $(NAME)
 
 re: fclean all
+
+bonus:	$(BONUS_OBJ)
+		$(AR) $(ARFLAGS) $(NAME) $(BONUS_OBJ)
