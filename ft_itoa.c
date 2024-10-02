@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 16:51:21 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/28 18:14:55 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/10/02 12:17:51 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 static	size_t	ft_get_size(int n)
 {
 	int	has_sign;
-	int	digits;
+	int	digit_number;
 
 	has_sign = 0;
-	digits = 0;
+	digit_number = 0;
 	if (n < 0)
 	{
 		has_sign = 1;
@@ -26,39 +26,39 @@ static	size_t	ft_get_size(int n)
 	}
 	while (n)
 	{
-		digits ++;
+		digit_number ++;
 		n /= 10;
 	}
-	return (digits + has_sign);
+	return (digit_number + has_sign);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*s;
+	char	*allocated_memory;
 	int		size;
 	
 	size = ft_get_size(n);
-	s = (char *)malloc(sizeof(char) * (size + 1));
-	if (!s)
+	allocated_memory = (char *)malloc(sizeof(char) * (size + 1));
+	if (!allocated_memory)
 		return(NULL);
-	s[size] = '\0';
+	allocated_memory[size] = '\0';
 	if (n == 0)
-		*s = '0';
+		*allocated_memory = '0';
 	if (n < 0)
 	{
-		s[0] = '-';
+		allocated_memory[0] = '-';
 		n *= -1;
 	}
 	while (n)
 	{
-		s[size - 1] = (n % 10) + 48;
+		allocated_memory[size - 1] = (n % 10) + 48;
 		n /= 10;
 		size --;
 	}
-	return(s);
+	return(allocated_memory);
 }
-
+/*
 int main(void)
 {
 	printf("%s", ft_itoa(-2147483647));
-}
+}*/

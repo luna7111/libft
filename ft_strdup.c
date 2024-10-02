@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 18:12:03 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/25 18:54:23 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/10/02 12:26:59 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 
 char	*ft_strdup(const char *s)
 {
-	char	*dup;
+	char	*duplicated_string;
 
-	dup = (char *)malloc(sizeof(char) * ft_strlen(s));
-	ft_strlcpy(dup, s, ft_strlen(s));
-	return ((char *)s);
+	duplicated_string = (char *)malloc(sizeof(char) * ft_strlen(s));
+	ft_strlcpy(duplicated_string, s, ft_strlen(s));
+	return (duplicated_string);
 }
 /*
 int	main(void)

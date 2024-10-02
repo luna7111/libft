@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 14:43:20 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/28 12:53:38 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/10/02 12:28:40 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,28 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*s;
-	size_t	len1;
-	size_t	len2;
+	size_t	string1_len;
+	size_t	string2_len;
 	size_t	i;
 
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
-	s = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
+	string1_len = ft_strlen(s1);
+	string2_len = ft_strlen(s2);
+	s = (char *)malloc(sizeof(char) * (string1_len + string2_len + 1));
 	if (!s)
 		return (NULL);
 	i = 0;
-	while (i < len1)
+	while (i < string1_len)
 	{
 		s[i] = s1[i];
 		i++;
 	}
 	i = 0;
-	while (i < len2)
+	while (i < string2_len)
 	{
-		s[len1 + i] = s2[i];
+		s[string1_len + i] = s2[i];
 		i++;
 	}
-	s[len1 + len2 + 1] = '\0';
+	s[string1_len + string2_len + 1] = '\0';
 	return (s);
 }
 /*

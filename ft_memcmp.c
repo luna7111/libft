@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 11:37:55 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/10/01 16:48:56 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/10/02 12:19:51 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	char	*s1_cast;
-	char	*s2_cast;
+	char	*casted_string1;
+	char	*casted_string2;
 
-	s1_cast = (char *)s1;
-	s2_cast = (char *)s2;
+	casted_string1 = (char *)s1;
+	casted_string2 = (char *)s2;
 	while (n)
 	{
-		if (*s1_cast != *s2_cast)
-			return (*s1_cast - *s2_cast);
+		if (*casted_string1 != *casted_string2)
+			return (*casted_string1 - *casted_string2);
 		n--;
 	}
 	return (0);
