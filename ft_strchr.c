@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 11:08:44 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/10/01 15:13:59 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/10/03 11:11:35 by luna             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strchr(const char *s, int c)
 	while (*match)
 	{
 		if (*match == c)
-			return(match);
+			return (match);
 		match ++;
 	}
 	if (c == '\0')

@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 10:02:30 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/30 18:01:09 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/10/03 11:12:20 by luna             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	char			*s;
 	unsigned int	start;
-	size_t 			end;
+	size_t			end;
 
 	start = 0;
 	while (s1[start] && ft_strchr(set, s1[start]))
@@ -31,7 +31,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 /*
 int	main(void)
 {
-	char s1[] = "adbcdbcabdcbbbacdcacaccdabdcbtestadaadadabcdabcdabcbbcadadadadada";
+	char s1[] = "acabdcbbbacdcacaccdabdcbtestadaadadabcdabcdabcbbcadadadadada";
 	char set[] = "abcd";
 	ft_strtrim(s1, set);
 }
