@@ -6,27 +6,26 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 08:51:46 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/27 15:11:00 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/10/05 13:51:50 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-//#include <string.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int	i;
+	size_t	i;
 
+	i = 0;
 	if (dest >= src)
 	{
-		while (n)
+		while (i <= n)
 		{
-			((char *)dest)[n] = ((char *)src)[n];
-			n --;
+			((char *)dest)[n - i] = ((char *)src)[n - i];
+			i ++;
 		}
 	}
 	else
 	{
-		i = 0;
 		while (i < n)
 		{
 			((char *)dest)[i] = ((char *)src)[i];
@@ -39,11 +38,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 int main (void)
 {
 
-	char src[] = "me voy a la luna";
-	size_t n = 5;
+	char src[] = "Lorem ipsum dolor sit amet";
+	char *dest;
 
-	printf("resultado mia:      %s\n", (char*)ft_memmove(src, &src[2], n));
-	printf("resultado original: %s\n", (char*)memmove(dest, src, n));
+	dest = src + 1;
+	size_t n = 5;
+	printf("Ft: %s\n", (char *)ft_memmove(dest, "consectetur", n));
+	printf("Or: %s\n", (char *)memmove(dest, "consectetur", n));
 	return (1);
-}
-*/
+}*/

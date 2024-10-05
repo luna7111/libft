@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 18:39:55 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/10/03 11:11:04 by luna             ###   ########.fr       */
+/*   Updated: 2024/10/05 13:00:28 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ static size_t	ft_count_words(char const *s, char c)
 static char	*ft_get_word(char const *s, char c, size_t n)
 {
 	char	*casted_string;
-	char	*word;
 	size_t	current_word;
 	size_t	word_len;
 
@@ -51,27 +50,35 @@ static char	*ft_get_word(char const *s, char c, size_t n)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	word_count;
-	size_t	i;
-	char	**sp;
+	long	word_count;
+	long	i;
+	char	**split;
+	char	*current_word;
 
 	word_count = ft_count_words(s, c);
-	sp = malloc(sizeof(char *) * (word_count + 1));
-	if (!sp)
+	split = malloc(sizeof(char *) * (word_count + 1));
+	if (!split)
 		return (NULL);
 	i = 0;
 	while (i <= word_count)
 	{
-		sp[i] = malloc(sizeof(char) * ft_strlen(ft_nth_w(s, c, i + 1)));
-		ft_strlcpy(sp[i], ft_nth_w(s, c, i + 1), ft_strlen(ft_nth_w(s, c, i + 1)) + 1);
-		i ++;
+		current_word = ft_get_word(s, c, i + 1);
+		if (!current_word)
+		{
+			while (--i >= 0)
+				free(split[i]);
+			free(split);
+			return (NULL);
+		}
+		split[i] = current_word;
+		i++;
 	}
-	return (sp);
+	return (split);
 }
-
+/*
 int	main(void)
 {
-	char	s[] = "   Lorem     ipsum dolor sit amet, consectetur  ";
+	char	s[] = "The Cake is a Lie The Cake is a Lie";
 	char	c = ' ';
 	char	**split;
 
@@ -81,4 +88,4 @@ int	main(void)
 		printf("%s\n", *split);
 		split ++;
 	}
-}
+}*/

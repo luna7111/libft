@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 10:34:37 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/10/04 20:39:36 by ldel-val         ###   ########.fr       */
+/*   Created: 2024/10/05 10:56:21 by ldel-val          #+#    #+#             */
+/*   Updated: 2024/10/05 11:02:51 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
-int	ft_toupper(int c)
+#include "libft.h"
+
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (c >= 'a' && c <= 'z')
-		c -= 32;
-	return (c);
+	while (*s)
+	{
+		write(fd, s, 1);
+		s++;
+	}
 }
 /*
 int	main(void)
 {
-	printf("%c", ft_toupper('a'));
+	char s[] = "Hello world";
+
+	ft_putstr_fd(s, 1);
 }*/

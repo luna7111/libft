@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 10:02:30 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/10/05 10:37:05 by ldel-val         ###   ########.fr       */
+/*   Created: 2024/10/05 10:34:22 by ldel-val          #+#    #+#             */
+/*   Updated: 2024/10/05 11:50:53 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	char			*s;
-	unsigned int	start;
-	size_t			end;
+	int	i;
 
-	start = 0;
-	while (s1[start] && ft_strchr(set, s1[start]))
-		start ++;
-	end = ft_strlen(s1) - 1;
-	while (s1[end] && ft_strchr(set, s1[end]))
-		end --;
-	s = ft_substr(s1, start, end - start + 1);
-	if (!s)
-		return (NULL);
-	return (s);
+	i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i ++;
+	}
 }
 /*
+void	ft_toupper2(unsigned int index, char *c)
+{
+	(void)index;
+	*c = ft_toupper(*c);
+}
+
 int	main(void)
 {
-	char s1[] = "acabdcbbbacdcacaccdabdcbtestadaadadabcdabcdabcbbcadadadadada";
-	char set[] = "abcd";
-	ft_strtrim(s1, set);
+	char s[] = "Hello world";
+	ft_striteri(s, ft_toupper2);
+	printf("%s",s);
 }*/
