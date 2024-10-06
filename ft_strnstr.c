@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 12:35:41 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/10/05 13:13:05 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/10/06 13:49:38 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-/*
+
 int	main(void)
 {
 	char big[] = "Hello world";
@@ -38,4 +38,4 @@ int	main(void)
 	size_t len = 10;
 	printf("Original: %s\n ft: %s", ft_strnstr(big, little, len),
 		ft_strnstr(big, little, len));
-}*/
+}

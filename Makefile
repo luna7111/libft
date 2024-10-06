@@ -45,7 +45,7 @@ ft_putstr_fd.c\
 ft_putendl_fd.c\
 ft_putnbr_fd.c
 
-BONUS_SRC = ft_lstnew_bonus.c\
+#BONUS_SRC = ft_lstnew_bonus.c\
 ft_lstsize_bonus.c\
 ft_lstlast_bonus.c\
 ft_lstadd_back_bonus.c\
