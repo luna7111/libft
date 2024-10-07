@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 16:51:21 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/10/03 11:13:11 by luna             ###   ########.fr       */
+/*   Updated: 2024/10/07 16:26:04 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ static	size_t	ft_get_size(int n)
 
 	has_sign = 0;
 	digit_number = 0;
+	if (n == 0)
+		return (1);
 	if (n < 0)
 	{
 		has_sign = 1;
@@ -41,6 +43,8 @@ char	*ft_itoa(int n)
 	allocated_memory = (char *)malloc(sizeof(char) * (size + 1));
 	if (!allocated_memory)
 		return (NULL);
+	if (n == -2147483648)
+		return (ft_memcpy(allocated_memory, "-2147483648", 12));
 	allocated_memory[size] = '\0';
 	if (n == 0)
 		*allocated_memory = '0';
@@ -58,7 +62,7 @@ char	*ft_itoa(int n)
 	return (allocated_memory);
 }
 /*
-int main(void)
+int	main(void)
 {
-	printf("%s", ft_itoa(-2147483647));
+	printf("ft: %s\n", ft_itoa(0));
 }*/
