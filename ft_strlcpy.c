@@ -6,18 +6,20 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 14:02:40 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/10/06 12:22:36 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/10/08 11:14:43 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <bsd/string.h>
+#include <bsd/string.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 
 	i = 0;
+	if (size == 0)
+		return (ft_strlen(src));
 	while (i < size - 1 && src[i])
 	{
 		dst[i] = src[i];
@@ -33,8 +35,7 @@ int main(void)
 	char ft_dst[] = "Lorem ipsum dolor sit amet";
 	char src[] = "Hello world";
 
-	printf("Original: return: %ld text: %s\n", strlcpy(dst, src, 20), dst);	
-	printf("ft: return: %ld text: %s\n", ft_strlcpy(ft_dst, src, 20), ft_dst);	
+	printf("Original: return: %ld text: %s\n", strlcpy(dst, src, 0), dst);	
+	printf("ft: return: %ld text: %s\n", ft_strlcpy(ft_dst, src, 0), ft_dst);	
 	return (0);
-}
-*/
+}*/

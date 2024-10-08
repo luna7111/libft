@@ -6,46 +6,48 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 18:39:55 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/10/05 13:00:28 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/10/08 19:28:32 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_count_words(char const *s, char c)
+/*static size_t	ft_count_words(char const *s, char c)
 {
 	size_t	word_count;
+	size_t	i;
 
 	word_count = 0;
-	while (*s)
+	i = 0;
+	while (s[i])
 	{
-		if (*s != c && (s[1] == c || s[1] == '\0'))
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 			word_count++;
-		s ++;
+		i ++;
 	}
 	return (word_count);
 }
 
 static char	*ft_get_word(char const *s, char c, size_t n)
 {
-	char	*casted_string;
 	size_t	current_word;
 	size_t	word_len;
+	size_t	i;
 
+	i = 0;
 	current_word = 0;
-	casted_string = (char *)s;
-	if (*casted_string != c)
+	if (s[i] != c)
 		current_word = 1;
-	while (*casted_string && current_word < n)
+	while (s[i] && current_word < n)
 	{
-		if (*casted_string == c && casted_string[1] != c)
+		if (s[i] == c && s[i + 1] != c)
 			current_word ++;
 		casted_string ++;
 	}
 	word_len = 0;
-	while (casted_string[word_len] != c && casted_string[word_len] != '\0')
+	while (s[i + word_len] != c && s[i + word_len] != '\0')
 		word_len ++;
-	return (ft_substr(casted_string, 0, word_len));
+	return (ft_substr(s[i], 0, word_len));
 }
 
 char	**ft_split(char const *s, char c)
@@ -75,13 +77,14 @@ char	**ft_split(char const *s, char c)
 	}
 	return (split);
 }
-/*
+
 int	main(void)
 {
-	char	s[] = "The Cake is a Lie The Cake is a Lie";
+	char	s[] = "  The   cake is a lie   ";
 	char	c = ' ';
 	char	**split;
 
+	printf("%s\n", ft_get_word(s, c, 3));
 	split = ft_split(s, c);
 	while (**split)
 	{

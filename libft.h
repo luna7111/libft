@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 14:44:21 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/10/05 13:35:19 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/10/08 19:29:59 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,6 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-//t_list	*ft_lstnew(void *content);
+t_list	*ft_lstnew_bonus(void *content);
+t_list	*ft_lstadd_front_bonus(t_list **lst, t_list *new);
 #endif

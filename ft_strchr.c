@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 11:08:44 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/10/03 11:11:35 by luna             ###   ########.fr       */
+/*   Updated: 2024/10/08 11:35:01 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,6 @@ char	*ft_strchr(const char *s, int c)
 int	main(void)
 {
 	char s[] = "Hello world";
-	if (ft_strchr(s, 'a'))
-		printf("encontrado\n");
-	else
-		printf("no encontrado\n");
-	printf("%s", ft_strchr(s, 'a'));
+
+	printf("Original: %s\nFt: %s\n", strchr(s, '\0'), ft_strchr(s, '\0'));
 }*/

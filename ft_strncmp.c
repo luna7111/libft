@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 11:09:46 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/09/26 11:29:09 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/10/08 11:47:13 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,18 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	while (*s1 && *s1 == *s2 && n--)
+	unsigned char	*casted_array1;
+	unsigned char	*casted_array2;
+
+	casted_array1 = (unsigned char *)s1;
+	casted_array2 = (unsigned char *)s2;
+	while (*casted_array1 && *casted_array1 == *casted_array2 && n--)
 	{
-		s1++;
-		s2++;
+		casted_array1++;
+		casted_array2++;
 	}
 	if (n > 0)
-		return (*s1 - *s2);
+		return (*casted_array1 - *casted_array2);
 	return (0);
 }
 /*

@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 16:27:15 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/10/02 12:15:12 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/10/08 12:33:20 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	char	*allocated_memory;
 	size_t	i;
 
-	if (nmemb == SIZE_MAX || size == SIZE_MAX)
+	if (size && nmemb > SIZE_MAX / size)
 		return (NULL);
 	i = size * nmemb;
 	allocated_memory = (char *)malloc(nmemb * size);

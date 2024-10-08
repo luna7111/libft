@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 14:43:20 by ldel-val          #+#    #+#             */
-/*   Updated: 2024/10/02 12:28:40 by ldel-val         ###   ########.fr       */
+/*   Updated: 2024/10/08 12:41:28 by ldel-val         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		s[string1_len + i] = s2[i];
 		i++;
 	}
-	s[string1_len + string2_len + 1] = '\0';
+	s[string1_len + string2_len] = '\0';
 	return (s);
 }
 /*
