@@ -62,8 +62,8 @@ BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-		$(AR) $(ARFLAGS) $(NAME) $(OBJ)
+$(NAME): $(OBJ) $(BONUS_OBJ)
+		$(AR) $(ARFLAGS) $(NAME) $(OBJ) $(BONUS_OBJ)
 
 clean:
 		rm -f $(OBJ) $(BONUS_OBJ)
