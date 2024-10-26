@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:49:52 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/26 15:49:54 by ldel-val          ``                     */
+/*   Updated: 2024/10/26 16:23:00 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 
 char	**ft_split(char const *s, char c);
 
+int		ft_itob(int nb);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
