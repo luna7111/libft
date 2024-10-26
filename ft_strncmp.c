@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:48:57 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/26 15:48:57 by ldel-val          ``                     */
+/*   Updated: 2024/10/26 15:57:12 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return ((unsigned char)*s1 - (unsigned char)*s2);
 	return (0);
 }
-/*
-int	main(void)
-{
-	char s1[] = "1234567890";
-	char s2[] = "1bcdefghij";
-
-	printf("ft: %d\n", ft_strncmp(s1, s2, 32));
-	printf("original: %d\n", strncmp(s1, s2, 32));
-}*/

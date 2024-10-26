@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:42:57 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/26 15:42:58 by ldel-val          ``                     */
+/*   Updated: 2024/10/26 15:55:08 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			((char *)dest)[n] = ((char *)src)[n];
 	return (dest);
 }
-/*
-int main (void)
-{
-	char src[] = "Lorem ipsum dolor sit amet";
-	char src2[] = "Lorem ipsum dolor sit amet";
-	char *dest;
-	char *dest2;
-
-	dest = src + 1;
-	dest2 = src2 + 1;
-	printf("Ft: %s\n", (char *)ft_memmove(src, dest, 8));
-	printf("Or: %s\n", (char *)memmove(src, dest, 8));
-	return (1);
-}*/

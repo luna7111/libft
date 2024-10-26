@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:42:50 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/26 15:42:52 by ldel-val          ``                     */
+/*   Updated: 2024/10/26 15:54:59 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
-int main (void)
-{
-
-	char dest[] = "viva la vida";
-	char src[] = "me voy a la luna";
-	size_t n = 999;
-
-	printf("resultado original: %s\n", (char*)memcpy(dest, src, n));
-//	printf("resultado mia:      %s\n", (char*)ft_memcpy(dest, src, n));
-	return (0);
-}*/

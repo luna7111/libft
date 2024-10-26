@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:43:47 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/26 15:43:49 by ldel-val          ``                     */
+/*   Updated: 2024/10/26 15:56:02 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,19 +85,3 @@ char	**ft_split(char const *s, char c)
 	split[i] = NULL;
 	return (split);
 }
-/*
-int	main(void)
-{
-	char	s[] = "lorem ipsum dolor sit amet, consectetur adipiscing elit.";
-	char	c = ' ';
-	char	**split;
-
-	//printf("%ld\n", ft_count_words(s, c));
-	//printf("%s\n", ft_get_word(s, c, 1));
-	split = ft_split(s, c);
-	while (*split)
-	{
-		printf("%s\n", *split);
-		split ++;
-	}
-}*/

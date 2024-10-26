@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:48:32 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/26 15:48:33 by ldel-val          ``                     */
+/*   Updated: 2024/10/26 15:57:38 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (ft_calloc(1, sizeof(char)));
 	return (ft_substr(s1, start, end - start + 1));
 }
-/*
-int	main(void)
-{
-	char s1[] = "acabdcbbbacdcacaccdabdcbdatadadabcdabcdabcbbcadadadadada";
-	char set[] = "abcd";
-	printf("%s\n", ft_strtrim(s1, set));
-}*/

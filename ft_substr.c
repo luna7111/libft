@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:48:23 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/26 15:48:26 by ldel-val          ``                     */
+/*   Updated: 2024/10/26 15:57:44 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(substr, ((char *)s) + start, len + 1);
 	return (substr);
 }
-/*
-int main(void)
-{
-	char s[] = "Hola Hola mundo mundo";
-	printf("%s", ft_substr(s, 5, 10));
-}*/

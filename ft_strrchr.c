@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:48:39 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/26 15:48:40 by ldel-val          ``                     */
+/*   Updated: 2024/10/26 15:57:31 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-/*
-int	main(void)
-{
-	char s[] = "Hello world";
-
-	printf("Original: %s\nFt: %s\n",strrchr(s, '\0'), ft_strrchr(s, '\0'));
-}*/

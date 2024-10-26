@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:44:05 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/26 15:44:08 by ldel-val          ``                     */
+/*   Updated: 2024/10/26 15:56:13 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,3 @@ char	*ft_strdup(const char *s)
 	ft_strlcpy(duplicated_string, s, ft_strlen(s) + 1);
 	return (duplicated_string);
 }
-/*
-int	main(void)
-{
-	char s[] = "ahora que no nos oye paolo, viva la pizza con piña";
-
-	printf("ft: %s\nOriginal: %s\n", ft_strdup(s), strdup(s));
-}
-*/

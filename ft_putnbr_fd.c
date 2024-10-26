@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:43:30 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/26 15:43:33 by ldel-val          ``                     */
+/*   Updated: 2024/10/26 15:55:47 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,3 @@ void	ft_putnbr_fd(int n, int fd)
 	digit_char = (n % 10) + '0';
 	write(fd, &digit_char, 1);
 }
-/*
-int	main(void)
-{
-	ft_putnbr_fd(123, 1);
-}*/

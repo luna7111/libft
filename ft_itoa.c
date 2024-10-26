@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:40:54 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/26 15:40:56 by ldel-val          ``                     */
+/*   Updated: 2024/10/26 15:53:35 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,3 @@ char	*ft_itoa(int n)
 	}
 	return (allocated_memory);
 }
-/*
-int	main(void)
-{
-	printf("ft: %s\n", ft_itoa(INT_MIN));
-}*/

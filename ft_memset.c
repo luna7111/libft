@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:43:04 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/26 15:43:05 by ldel-val          ``                     */
+/*   Updated: 2024/10/26 15:55:18 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-/*
-int main(void)
-{
-
-	char test[] = "hola mundo";
-
-	printf("%s", (char *)ft_memset(test, 'r', 5));
-}*/

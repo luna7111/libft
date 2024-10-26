@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:44:23 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/26 15:44:25 by ldel-val          ``                     */
+/*   Updated: 2024/10/26 15:56:32 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(s, s2, string1_len + string2_len + 1);
 	return (s);
 }
-/*
-int	main(void)
-{
-	char s1[] = "Hello ";
-	char s2[] = "world!";
-
-	printf("%s", ft_strjoin(s1, s2));
-}*/

@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:39:52 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/26 15:39:55 by ldel-val          ``                     */
+/*   Updated: 2024/10/26 15:53:15 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		allocated_memory[i] = '\0';
 	return (allocated_memory);
 }
-/*
-int	main(void)
-{
-	printf("ft: %p\n", ft_calloc(39999, 400));
-	printf("original: %p\n", calloc(39999, 400));
-
-	char *ptr = ft_calloc(10, sizeof(char));
-	if (ptr == NULL)
-		return (1);
-	ft_strlcpy(ptr, "Hello world", 12);
-	printf("%s\n", ptr);
-	free(ptr);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:39:30 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/26 15:39:32 by ldel-val          ``                     */
+/*   Updated: 2024/10/26 15:53:02 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (number * sign);
 }
-/*
-int main(void)
-{
-	char s[] = "\e475";
-
-	printf("Original: %d\nft: %d", atoi("-2147483648"), ft_atoi("-2147483648"));
-}*/

@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:43:39 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/26 15:43:40 by ldel-val          ``                     */
+/*   Updated: 2024/10/26 15:55:54 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,3 @@ void	ft_putstr_fd(char *s, int fd)
 		s++;
 	}
 }
-/*
-int	main(void)
-{
-	char s[] = "Hello world";
-
-	ft_putstr_fd(s, 1);
-}*/

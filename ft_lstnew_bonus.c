@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:42:03 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/26 15:42:04 by ldel-val          ``                     */
+/*   Updated: 2024/10/26 15:54:12 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,3 @@ t_list	*ft_lstnew(void *content)
 	node->next = NULL;
 	return (node);
 }
-
-/*int	main(void)
-{
-	char	s[] = "Hello world!";
-
-	t_list *node;
-	node = ft_lstnew(s);
-	printf("%s\n", (char *)node->content);
-	printf("%p\n", node->next);
-}*/

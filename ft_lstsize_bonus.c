@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:42:11 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/26 15:42:12 by ldel-val          ``                     */
+/*   Updated: 2024/10/26 15:54:24 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (node_number);
 }
-/*
-int	main(void)
-{
-	t_list	*head;
-	int		content;
-
-	content = 42;
-	head = ft_lstnew(&content);
-	head->next = ft_lstnew(&content);
-	head->next->next = ft_lstnew(&content);
-	head->next->next->next = ft_lstnew(&content);
-	printf("%d", ft_lstsize(head));
-}
-*/
