@@ -6,11 +6,11 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:48:23 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/26 15:57:44 by ldel-val          ``                     */
+/*   Updated: 2024/10/27 11:39:55 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

@@ -6,11 +6,11 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:40:22 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/26 15:40:23 by ldel-val          ``                     */
+/*   Updated: 2024/10/27 11:38:31 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 int	ft_isascii(int c)
 {

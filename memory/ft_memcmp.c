@@ -6,11 +6,11 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:42:41 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/26 15:54:48 by ldel-val          ``                     */
+/*   Updated: 2024/10/27 11:39:49 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

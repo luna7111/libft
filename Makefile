@@ -11,51 +11,51 @@ ARFLAGS = -rc
 # Command to use to remove files
 RM = rm -f
 # List of all the .c files for the library
-SRC = ft_isalpha.c\
-ft_isdigit.c\
-ft_isalnum.c\
-ft_isascii.c\
-ft_isprint.c\
-ft_strlen.c\
-ft_memset.c\
-ft_memmove.c\
-ft_bzero.c\
-ft_memcpy.c\
-ft_strlcpy.c\
-ft_strlcat.c\
-ft_toupper.c\
-ft_tolower.c\
-ft_strchr.c\
-ft_strrchr.c\
-ft_strncmp.c\
-ft_memchr.c\
-ft_memcmp.c\
-ft_strnstr.c\
-ft_atoi.c\
-ft_calloc.c\
-ft_strdup.c\
-ft_substr.c\
-ft_strjoin.c\
-ft_strtrim.c\
-ft_split.c\
-ft_itob.c\
-ft_itoa.c\
-ft_strmapi.c\
-ft_striteri.c\
-ft_putchar_fd.c\
-ft_putstr_fd.c\
-ft_putendl_fd.c\
-ft_putnbr_fd.c
+SRC = char/ft_isalpha.c\
+char/ft_isdigit.c\
+char/ft_isalnum.c\
+char/ft_isascii.c\
+char/ft_isprint.c\
+string/ft_strlen.c\
+memory/ft_memset.c\
+memory/ft_memmove.c\
+deprecated/ft_bzero.c\
+memory/ft_memcpy.c\
+string/ft_strlcpy.c\
+string/ft_strlcat.c\
+char/ft_toupper.c\
+char/ft_tolower.c\
+string/ft_strchr.c\
+string/ft_strrchr.c\
+string/ft_strncmp.c\
+memory/ft_memchr.c\
+memory/ft_memcmp.c\
+string/ft_strnstr.c\
+conversion/ft_atoi.c\
+memory/ft_calloc.c\
+string/ft_strdup.c\
+string/ft_substr.c\
+string/ft_strjoin.c\
+string/ft_strtrim.c\
+string/ft_split.c\
+conversion/ft_itob.c\
+conversion/ft_itoa.c\
+string/ft_strmapi.c\
+string/ft_striteri.c\
+output/ft_putchar_fd.c\
+output/ft_putstr_fd.c\
+output/ft_putendl_fd.c\
+output/ft_putnbr_fd.c
 
-BONUS_SRC = ft_lstnew_bonus.c\
-ft_lstadd_front_bonus.c\
-ft_lstsize_bonus.c\
-ft_lstlast_bonus.c\
-ft_lstadd_back_bonus.c\
-ft_lstdelone_bonus.c\
-ft_lstclear_bonus.c\
-ft_lstiter_bonus.c\
-ft_lstmap_bonus.c
+BONUS_SRC = lists/ft_lstnew_bonus.c\
+lists/ft_lstadd_front_bonus.c\
+lists/ft_lstsize_bonus.c\
+lists/ft_lstlast_bonus.c\
+lists/ft_lstadd_back_bonus.c\
+lists/ft_lstdelone_bonus.c\
+lists/ft_lstclear_bonus.c\
+lists/ft_lstiter_bonus.c\
+lists/ft_lstmap_bonus.c
 
 OBJ = $(SRC:.c=.o)
 
