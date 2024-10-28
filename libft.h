@@ -6,12 +6,14 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:49:52 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/28 18:28:39 by ldel-val          ``                     */
+/*   Updated: 2024/10/28 18:47:03 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# define STDOUT 1
 
 # include <unistd.h>
 # include <stdio.h>
