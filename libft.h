@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:49:52 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/28 18:47:03 by ldel-val          ``                     */
+/*   Updated: 2024/10/28 20:48:08 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int				ft_putchar_fd(char c, int fd);
 int				ft_putstr_fd(char *s, int fd);
 int				ft_putendl_fd(char *s, int fd);
 int				ft_putnbr_fd(int n, int fd);
-unsigned int	ft_putunbr_fd(int n, int fd);
+unsigned int	ft_putunbr_fd(unsigned int n, int fd);
 int				ft_puthex_fd(size_t n, int fd);
 int				ft_putuphex_fd(size_t n, int fd);
 int				ft_puntoct_fd(int n, int fd);
