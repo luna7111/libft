@@ -48,6 +48,7 @@ output/ft_putendl_fd.c\
 output/ft_putnbr_fd.c\
 output/ft_putunbr_fd.c\
 output/ft_puthex_fd.c\
+output/ft_putuphex_fd.c\
 output/ft_putoct_fd.c\
 output/ft_putptr_fd.c
 
