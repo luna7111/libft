@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                    _.._  .           .     */
-/*   ft_putstr_fd.c                                 .' .-'`        *          */
+/*   ft_puthex_fd.c                                 .' .-'`        *          */
 /*                                                 /  /       +        *      */
-/*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
+/*   By: ldel-val <ldel-val@student.42madrid.c     |  |           *           */
 /*                                                 \  '.___.;       +         */
-/*   Created: 2024/10/26 15:43:39 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/28 11:50:35 by ldel-val          ``                     */
+/*   Created: 2024/10/28 17:00:39 by ldel-val       '._  _.'   .        .     */
+/*   Updated: 2024/10/28 17:48:29 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_putstr_fd(char *s, int fd)
+int	ft_puthex_fd(size_t n, int fd)
 {
 	int	printed_bytes;
 
 	printed_bytes = 0;
-	while (*s)
-	{
-		printed_bytes += write(fd, s, 1);
-		s++;
-	}
+	if (n >= 16)
+		printed_bytes += ft_puthex_fd(n / 16, fd);
+	n = n % 16;
+	if (n < 10)
+		printed_bytes += ft_putchar_fd(n + '0', fd);
+	else
+		printed_bytes += ft_putchar_fd(n + 'W', fd);
 	return (printed_bytes);
 }

@@ -45,7 +45,11 @@ string/ft_striteri.c\
 output/ft_putchar_fd.c\
 output/ft_putstr_fd.c\
 output/ft_putendl_fd.c\
-output/ft_putnbr_fd.c
+output/ft_putnbr_fd.c\
+output/ft_putunbr_fd.c\
+output/ft_puthex_fd.c\
+output/ft_putoct_fd.c\
+output/ft_putptr_fd.c
 
 BONUS_SRC = lists/ft_lstnew_bonus.c\
 lists/ft_lstadd_front_bonus.c\

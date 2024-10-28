@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                    _.._  .           .     */
-/*   ft_putchar_fd.c                                .' .-'`        *          */
+/*   ft_putptr_fd.c                                 .' .-'`        *          */
 /*                                                 /  /       +        *      */
-/*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
+/*   By: ldel-val <ldel-val@student.42madrid.c     |  |           *           */
 /*                                                 \  '.___.;       +         */
-/*   Created: 2024/10/26 15:43:14 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/28 11:42:45 by ldel-val          ``                     */
+/*   Created: 2024/10/28 16:10:57 by ldel-val       '._  _.'   .        .     */
+/*   Updated: 2024/10/28 18:02:56 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_putchar_fd(char c, int fd)
+int	ft_putptr_fd(void *ptr, int fd)
 {
-	return (write(fd, &c, 1));
+	int	printed_bytes;
+
+	printed_bytes = write(fd, "0x", 2);
+	printed_bytes += ft_puthex_fd((size_t)ptr, fd);
+	return (printed_bytes);
 }

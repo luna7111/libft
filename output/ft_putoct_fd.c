@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                    _.._  .           .     */
-/*   ft_putchar_fd.c                                .' .-'`        *          */
+/*   ft_putoct_fd.c                                 .' .-'`        *          */
 /*                                                 /  /       +        *      */
-/*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
+/*   By: ldel-val <ldel-val@student.42madrid.c     |  |           *           */
 /*                                                 \  '.___.;       +         */
-/*   Created: 2024/10/26 15:43:14 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/28 11:42:45 by ldel-val          ``                     */
+/*   Created: 2024/10/28 17:00:39 by ldel-val       '._  _.'   .        .     */
+/*   Updated: 2024/10/28 17:37:33 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_putchar_fd(char c, int fd)
+int	ft_putoct_fd(int n, int fd)
 {
-	return (write(fd, &c, 1));
+	int	printed_bytes;
+
+	printed_bytes = 0;
+	if (n >= 8)
+		printed_bytes += ft_putoct_fd(n / 8, fd);
+	n = n % 8;
+	printed_bytes += ft_putchar_fd(n + '0', fd);
+	return (printed_bytes);
 }
