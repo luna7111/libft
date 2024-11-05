@@ -6,13 +6,13 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:43:30 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/28 19:24:12 by ldel-val          ``                     */
+/*   Updated: 2024/10/29 15:02:23 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-unsigned int	ft_putunbr_fd(unsigned int n, int fd)
+int	ft_putunbr_fd(unsigned int n, int fd)
 {
 	int	printed_bytes;
 	int	digit_char;
