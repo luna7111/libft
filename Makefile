@@ -42,17 +42,17 @@ conversion/ft_itob.c\
 conversion/ft_itoa.c\
 string/ft_strmapi.c\
 string/ft_striteri.c\
-output/ft_putchar_fd.c\
-output/ft_putstr_fd.c\
-output/ft_putendl_fd.c\
-output/ft_putnbr_fd.c\
-output/ft_putunbr_fd.c\
-output/ft_puthex_fd.c\
-output/ft_putuphex_fd.c\
-output/ft_putoct_fd.c\
-output/ft_putptr_fd.c
-
-BONUS_SRC = lists/ft_lstnew_bonus.c\
+io/output/ft_putchar_fd.c\
+io/output/ft_putstr_fd.c\
+io/output/ft_putendl_fd.c\
+io/output/ft_putnbr_fd.c\
+io/output/ft_putunbr_fd.c\
+io/output/ft_puthex_fd.c\
+io/output/ft_putuphex_fd.c\
+io/output/ft_putoct_fd.c\
+io/output/ft_putptr_fd.c\
+io/input/get_next_line.c\
+lists/ft_lstnew_bonus.c\
 lists/ft_lstadd_front_bonus.c\
 lists/ft_lstsize_bonus.c\
 lists/ft_lstlast_bonus.c\
@@ -64,12 +64,11 @@ lists/ft_lstmap_bonus.c
 
 OBJ = $(SRC:.c=.o)
 
-BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(BONUS_OBJ)
-		$(AR) $(ARFLAGS) $(NAME) $(OBJ) $(BONUS_OBJ)
+$(NAME): $(OBJ)
+		$(AR) $(ARFLAGS) $(NAME) $(OBJ)
 
 clean:
 		rm -f $(OBJ) $(BONUS_OBJ)
@@ -79,6 +78,4 @@ fclean: clean
 
 re: fclean all
 
-bonus:	$(BONUS_OBJ)
-		$(AR) $(ARFLAGS) $(NAME) $(BONUS_OBJ)
-.PHONY: all re clean fclean bonus
+.PHONY: all re clean fclean
