@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:49:52 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/11/05 12:18:50 by ldel-val          ``                     */
+/*   Updated: 2024/11/07 12:47:08 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,11 @@ int		ft_puthex_fd(size_t n, int fd);
 int		ft_putuphex_fd(size_t n, int fd);
 int		ft_puntoct_fd(int n, int fd);
 int		ft_putptr_fd(void *ptr, int fd);
+
+char 	*get_next_line(int fd);
+ssize_t ft_read(int fd, char *buffer, size_t count);
+long	ft_find_lbreak(char *string);
+char	*ft_strnappend(char *dest, char *src, size_t nb);
 
 typedef struct s_list
 {
