@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:49:52 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/11/07 12:47:08 by ldel-val          ``                     */
+/*   Updated: 2024/11/16 19:09:11 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,21 @@
 # define STDOUT 1
 # define STDERR 2
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 100
+# endif
+
+# ifndef MAX_FD
+#  define MAX_FD 1024
+# endif
+
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <stdint.h>
 # include <limits.h>
 # include <string.h>
+# include <fcntl.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -59,6 +68,7 @@ char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strappend(char *dest, char *src, size_t bytes);
 
 char	**ft_split(char const *s, char c);
 
@@ -77,10 +87,9 @@ int		ft_putuphex_fd(size_t n, int fd);
 int		ft_puntoct_fd(int n, int fd);
 int		ft_putptr_fd(void *ptr, int fd);
 
-char 	*get_next_line(int fd);
-ssize_t ft_read(int fd, char *buffer, size_t count);
+char	*get_next_line(int fd);
+ssize_t	ft_read(int fd, char *buffer, size_t count);
 long	ft_find_lbreak(char *string);
-char	*ft_strnappend(char *dest, char *src, size_t nb);
 
 typedef struct s_list
 {
