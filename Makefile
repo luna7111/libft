@@ -3,7 +3,7 @@ NAME = libft.a
 # Compiler to use
 CC = cc
 # Flags to use when compiling
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g3
 # Archiver to use
 AR = ar
 # Flags to use when archiving
@@ -38,6 +38,7 @@ string/ft_substr.c\
 string/ft_strjoin.c\
 string/ft_strtrim.c\
 string/ft_split.c\
+string/ft_strappend.c\
 conversion/ft_itob.c\
 conversion/ft_itoa.c\
 string/ft_strmapi.c\
@@ -51,7 +52,7 @@ io/output/ft_puthex_fd.c\
 io/output/ft_putuphex_fd.c\
 io/output/ft_putoct_fd.c\
 io/output/ft_putptr_fd.c\
-io/input/get_next_line.c\
+io/input/ft_get_next_line.c\
 lists/ft_lstnew_bonus.c\
 lists/ft_lstadd_front_bonus.c\
 lists/ft_lstsize_bonus.c\
