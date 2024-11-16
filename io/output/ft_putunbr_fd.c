@@ -6,11 +6,11 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/10/26 15:43:30 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/10/29 15:02:23 by ldel-val          ``                     */
+/*   Updated: 2024/11/16 16:45:15 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../../libft.h"
 
 int	ft_putunbr_fd(unsigned int n, int fd)
 {
