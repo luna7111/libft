@@ -3,7 +3,7 @@ NAME = libft.a
 # Compiler to use
 CC = cc
 # Flags to use when compiling
-CFLAGS = -Wall -Wextra -Werror -g3
+CFLAGS = -Wall -Wextra -Werror
 # Archiver to use
 AR = ar
 # Flags to use when archiving
@@ -61,7 +61,8 @@ lists/ft_lstadd_back_bonus.c\
 lists/ft_lstdelone_bonus.c\
 lists/ft_lstclear_bonus.c\
 lists/ft_lstiter_bonus.c\
-lists/ft_lstmap_bonus.c
+lists/ft_lstmap_bonus.c\
+io/output/ft_printf.c
 
 OBJ = $(SRC:.c=.o)
 
