@@ -53,6 +53,7 @@ io/output/ft_putuphex_fd.c\
 io/output/ft_putoct_fd.c\
 io/output/ft_putptr_fd.c\
 io/input/ft_get_next_line.c\
+io/input/ft_get_whole_file.c\
 lists/ft_lstnew_bonus.c\
 lists/ft_lstadd_front_bonus.c\
 lists/ft_lstsize_bonus.c\
