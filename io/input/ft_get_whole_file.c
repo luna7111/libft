@@ -6,9 +6,11 @@
 /*   By: ldel-val <ldel-val@42madrid.com>          |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/12/03 15:05:21 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/12/03 15:29:54 by ldel-val          ``                     */
+/*   Updated: 2024/12/04 09:41:46 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../../libft.h"
 
 char	*get_whole_file(int fd)
 {
