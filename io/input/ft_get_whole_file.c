@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@42madrid.com>          |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/12/03 15:05:21 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/12/04 09:41:46 by ldel-val          ``                     */
+/*   Updated: 2024/12/04 10:00:00 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ char	*get_whole_file(int fd)
 	char	*file;
 	char	*buffer;
 	long	read_bytes;
-
+	
+	file = NULL;
 	buffer = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
 	read_bytes = read(fd, buffer, BUFFER_SIZE);
 	buffer[read_bytes] = '\0';
