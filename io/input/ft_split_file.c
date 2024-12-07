@@ -6,13 +6,13 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/12/04 11:09:45 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/12/07 19:44:28 by ldel-val          ``                     */
+/*   Updated: 2024/12/07 20:13:50 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char	**realloc_array(char **array, int size, int new_size)
+char	**realloc_array(char **array, size_t size, size_t new_size)
 {
 	char	**new_array;
 
@@ -31,8 +31,8 @@ char	**realloc_array(char **array, int size, int new_size)
 char	**split_file(int fd)
 {
 	char	**split_file;
-	int		size;
-	int		line;
+	size_t		size;
+	size_t		line;
 
 	size = 128;
 	split_file = malloc(sizeof(char *) * size);
@@ -45,8 +45,10 @@ char	**split_file(int fd)
 		line ++;
 		if (line >= size)
 		{
-			split_file = realloc_array(split_file, line, size);
 			size *= 2;
+			split_file = realloc_array(split_file, line, size);
+			if (!split_file)
+				return (NULL);
 		}
 		split_file[line] = get_next_line(fd);
 	}
