@@ -6,7 +6,7 @@
 /*   By: ldel-val <ldel-val@student.42madrid.com>  |  |           *           */
 /*                                                 \  '.___.;       +         */
 /*   Created: 2024/12/04 11:09:45 by ldel-val       '._  _.'   .        .     */
-/*   Updated: 2024/12/07 19:20:40 by ldel-val          ``                     */
+/*   Updated: 2024/12/07 19:35:38 by ldel-val          ``                     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,11 @@ char	**realloc_array(char **array, int size, int new_size)
 char	**split_file(int fd)
 {
 	char	**split_file;
+	int		size;
 	int		line;
 
-	split_file = malloc(sizeof(char *));
+	size = 128;
+	split_file = malloc(sizeof(char *) * size);
 	if (!split_file)
 		return (NULL);
 	line = 0;
@@ -41,7 +43,8 @@ char	**split_file(int fd)
 	while (split_file[line])
 	{
 		line ++;
-		split_file = realloc_array(split_file, line, line + 1);
+		if (line > size)
+			split_file = realloc_array(split_file, line, line * 2);
 		split_file[line] = get_next_line(fd);
 	}
 	return (split_file);
