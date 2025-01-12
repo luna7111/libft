@@ -3,7 +3,7 @@ NAME = libft.a
 # Compiler to use
 CC = cc
 # Flags to use when compiling
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I.
 # Archiver to use
 AR = ar
 # Flags to use when archiving
@@ -21,6 +21,7 @@ memory/ft_memset.c\
 memory/ft_memmove.c\
 deprecated/ft_bzero.c\
 memory/ft_memcpy.c\
+memory/free_utils.c\
 string/ft_strlcpy.c\
 string/ft_strlcat.c\
 char/ft_toupper.c\
