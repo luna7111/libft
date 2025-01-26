@@ -63,7 +63,8 @@ lists/ft_lstdelone_bonus.c\
 lists/ft_lstclear_bonus.c\
 lists/ft_lstiter_bonus.c\
 lists/ft_lstmap_bonus.c\
-io/output/ft_printf.c
+io/output/ft_printf.c\
+io/output/ft_dprintf.c
 
 OBJ = $(SRC:.c=.o)
 
